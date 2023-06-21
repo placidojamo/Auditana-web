@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;0,800;1,300;1,400&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ font-family: 'Poppins', sans-serif;
+
+}
+header{
+    position:fixed ;
+    background: rgb(201, 197, 197);
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+}
+label{
+    float: right;
+}
+label, .left{
+    display: inline-block;
+    padding-right: 50px;
+    flex-wrap: wrap;
+}
+
+.left h3{
+    color: rgb(160, 53, 53);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 22px;
+    font-weight: 800;
+}
+.left span{
+    color: white;
+    
+}
+.left .d{
+    color: rgb(75, 71, 71);
+
+
+}
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    margin-top: 70px;
+    padding-top: 30px;
+    left: 0;
+    background: #394551;
+    transition: 0.5s;
+    transition-property: left;
+}
+.sidebar  .imagen{
+    height: 100px; 
+    width: 100px;
+    border-radius: 10px;
+}
+.sidebar h2{
+    color:whitesmoke;  
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.sidebar a{
+    color: aliceblue;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+.sidebar a:hover{
+    background: whitesmoke;
+    color: brown;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: ease-in-out .32s;
+
+}
+label ion-icon{
+    width: 25px;
+    height: 25px;
+}
+.sidebar ion-icon{
+    padding-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+label #sidebar_btn{
+    z-index: 1;
+    position: fixed;
+    left: 300px;
+    color: aliceblue;
+    font-size: 25px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0,5s;
+    transition-property:color ;
+}
+label #sidebar_btn:hover{
+    color: #51b3ec;
+}
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+#check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width:80px ;
+}
+.content{
+    background: url(imagens/24123.jpg) no-repeat;
+    background-size: cover ;
+    background-position: center;
+    height: 100vh;
+    transition: 0.5s;
+}
+#check:checked ~ .content{
+    margin-left: 60px;
+}
+#check{
+    display: none;
+}
